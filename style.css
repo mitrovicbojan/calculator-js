@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600&display=swap');
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #000, #999);
+}
+
+.calc-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows:  minmax(120px, auto) repeat(5, 100px);
+}
+
+.calc-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    border-radius: 1.5rem;
+    outline: none;
+    background-color: rgb(108, 196, 108, .5);
+    margin: 2% 2% 2% 2%;
+}
+
+.calc-grid > button:hover {
+    background-color: rgb(108, 196, 108, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0.625rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    margin-bottom: 1rem;
+    border-radius: 1.5rem;
+}
+
+.output .previous-operand {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: black;
+    font-size: 2.5rem;
+}
